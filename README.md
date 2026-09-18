@@ -51,8 +51,6 @@ The addon uses familiar names over Godot-native structures, and it will always s
 
 **Experience reports are as valuable as code.** Everyone who makes this switch gets stuck on something different, and nobody hits all of it. If something in here was confusing, missing, or didn't behave the way your Roblox instincts expected, open an issue.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
 ---
 
 ## Licence
