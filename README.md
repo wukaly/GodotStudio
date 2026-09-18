@@ -1,10 +1,9 @@
 # GodotStudio
 
-**Coming to Godot from Roblox Studio.** A Godot template, a compatibility add-on, and translation document for developers experienced with Roblox Studio.
+**Coming to Godot from Roblox Studio.** A Godot template and compatibility plugin for developers experienced with Roblox Studio looking to switch to Godot.
 
 If you have a lot of experience in Roblox Studio. Learning Godot can be quite easy, the goal of this repo is to bridge that gap by making connections across both engines as well as providing tools to jump start the journey.
 
-- **[Full translation guide](docs/translation-guide.md)** | Concepts and translations linked between Godot and Roblox Studio
 - **Addon** (`addons/GodotStudio/`) | Familiar service names and replication helpers over Godot-native structures
 - **Template** (`demo/`) | A project that closely resembles a starting place in Roblox Studio
 
