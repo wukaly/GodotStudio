@@ -26,16 +26,6 @@ Click **Use this template** above, or clone it and delete any unnecessary files.
 
 ---
 
-## Contributing
-
-**The guide is the part that most needs you.** Everyone who makes this switch discovers one more catch, and nobody has them all. If you hit something the guide didn't warn you about, open an issue, or send a PR adding a row.
-
-Adding a table row is a completely valid contribution and needs no discussion first. Larger changes to the addon are worth opening an issue for before writing code.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
 ## Design principle
 
 This project is meant to be a bridge between engines, not it's own framework.
@@ -43,6 +33,16 @@ This project is meant to be a bridge between engines, not it's own framework.
 The goal of this project is not to have you writing Roblox shaped code forever. It's so the transition is smoother, and those who are not eager to change can give Godot a shot. Allowing them to slowly learn the engine for what it is.
 
 The addon uses familiar names over Godot-native structures, and they will always say what's underneath. Where you see `ReplicatedStorage`, the docs tell you it's an autoload. Where you see a replication helper, they tell you it's wrapping `MultiplayerSynchronizer`. The goal is to lower the activation energy and then get out of the way.
+
+---
+
+## Contributing
+
+**The guide is the part that most needs you.** Everyone who makes this switch discovers one more catch, and nobody has them all. If you hit something the guide didn't warn you about, open an issue, or send a PR adding a row.
+
+Adding a table row is a completely valid contribution and needs no discussion first. Larger changes to the addon are worth opening an issue for before writing code.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
