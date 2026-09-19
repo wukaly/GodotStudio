@@ -1,6 +1,6 @@
 extends Node
 
-const MATCH_SCENE := preload("res://scenes/game/match.tscn")
+const MATCH_SCENE := preload("res://scenes/game/workspace.tscn")
 
 @onready var world: Node3D = $World
 @onready var ui: CanvasLayer = $UiRoot

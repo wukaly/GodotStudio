@@ -51,6 +51,11 @@ func is_connected_to_lobby() -> bool:
 func is_host() -> bool:
 	return is_connected_to_lobby() and multiplayer.is_server()
 
+func supports_invites() -> bool:
+	return backend.supports_invites()
+
+func supports_lobby_list() -> bool:
+	return backend.supports_lobby_list()
 
 func _create_backend() -> MatchmakingBackend:
 	if ClassDB.class_exists("Steam"):

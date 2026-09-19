@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bpyl8ncj4hmvx"]
+
+[ext_resource type="Script" uid="uid://ifxgud2re136" path="res://scenes/game/workspace.gd" id="1_8jylx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_abnr6"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a55iv"]
+size = Vector3(40, 1, 40)
+
+[node name="Workspace" type="Node3D" unique_id=1453766616]
+script = ExtResource("1_8jylx")
+
+[node name="BasePlate" type="StaticBody3D" parent="." unique_id=384620686]
+
+[node name="Mesh" type="MeshInstance3D" parent="BasePlate" unique_id=1699641525]
+mesh = SubResource("BoxMesh_abnr6")
+
+[node name="Collision" type="CollisionShape3D" parent="BasePlate" unique_id=307094435]
+shape = SubResource("BoxShape3D_a55iv")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=829240911]
+transform = Transform3D(0.8660254, 0.3535534, -0.3535534, 0, 0.7071068, 0.7071068, 0.5, -0.61237246, 0.61237246, 0, 7.4821463, 0)
+
+[node name="Players" type="Node3D" parent="." unique_id=913671962]

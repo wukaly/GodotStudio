@@ -36,6 +36,9 @@ func _ready() -> void:
 	map_option.item_selected.connect(func(i): _set_setting("map", MAPS[i]))
 	mode_option.item_selected.connect(func(i): _set_setting("mode", MODES[i]))
 	max_players_spin.value_changed.connect(func(v): _set_setting("max_players", int(v)))
+	
+	var network := get_node_or_null("/root/Network")
+	invite_button.visible = network != null and network.supports_invites()
 
 	if _lobby:
 		_lobby.player_joined.connect(_on_player_changed)

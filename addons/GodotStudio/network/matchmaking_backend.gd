@@ -28,6 +28,8 @@ func join_by_address(_address: String, _port: int) -> void:
 func leave() -> void:
 	push_error("leave not implemented by %s" % get_script().resource_path)
 
+func supports_invites() -> bool:
+	return false
 
 func supports_lobby_list() -> bool:
 	return false
