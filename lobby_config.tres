@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_txkbq")
 use_lobby_screen = false
+require_approval = true
 metadata/_custom_type_script = "uid://btr4kft6ht5of"

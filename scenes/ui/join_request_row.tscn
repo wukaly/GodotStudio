@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d0spo6rh3m2p1"]
+
+[ext_resource type="Script" uid="uid://bst6kqp6igpav" path="res://scenes/ui/join_request_row.gd" id="1_wp26c"]
+
+[node name="JoinRequestRow" type="PanelContainer" unique_id=1913301587]
+script = ExtResource("1_wp26c")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1784819098]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1613069769]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=713095505]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=2076764929]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AcceptButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=298917905]
+layout_mode = 2
+text = "Accept"
+
+[node name="DenyButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=631884867]
+layout_mode = 2
+text = "Deny"

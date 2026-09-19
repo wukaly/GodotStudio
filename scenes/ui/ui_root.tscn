@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bf1n7tdx4ot5v" path="res://scenes/ui/direct_join.tscn" id="4_t1f3t"]
 [ext_resource type="PackedScene" uid="uid://cp6sv0o2700nk" path="res://scenes/ui/connection_overlay.tscn" id="4_yoora"]
 [ext_resource type="PackedScene" uid="uid://yt8cio83ist6" path="res://scenes/ui/lobby.tscn" id="5_bn0b7"]
+[ext_resource type="PackedScene" uid="uid://cua553v1ustna" path="res://scenes/ui/pause_menu.tscn" id="6_bn0b7"]
 
 [node name="UiRoot" type="CanvasLayer" unique_id=272056482]
 script = ExtResource("1_w6j4g")
@@ -29,5 +30,8 @@ layout_mode = 1
 
 [node name="Lobby" parent="Screens" unique_id=795364109 instance=ExtResource("5_bn0b7")]
 layout_mode = 1
+
+[node name="PauseMenu" parent="." unique_id=1543082370 instance=ExtResource("6_bn0b7")]
+visible = false
 
 [node name="ConnectionOverlay" parent="." unique_id=705208219 instance=ExtResource("4_yoora")]

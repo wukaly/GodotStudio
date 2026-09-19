@@ -5,13 +5,13 @@ extends CanvasLayer
 @onready var direct_join := $Screens/DirectJoin
 @onready var lobby := $Screens/Lobby
 @onready var overlay := $ConnectionOverlay
+@onready var pause_menu := $PauseMenu
 
 
 func _ready() -> void:
 	main_menu.host_requested.connect(_on_host_requested)
 	main_menu.browse_requested.connect(func(): show_screen(lobby_browser))
 	main_menu.direct_join_requested.connect(func(): show_screen(direct_join))
-
 	lobby_browser.back_requested.connect(func(): show_screen(main_menu))
 	direct_join.back_requested.connect(func(): show_screen(main_menu))
 	lobby.leave_requested.connect(func(): show_screen(main_menu))
@@ -30,6 +30,18 @@ func _ready() -> void:
 		func(): overlay.show_busy("Connecting…")
 	)
 
+func _on_lobby_joined(_id) -> void:
+	overlay.hide_overlay()
+	var lobby_service = get_node_or_null("/root/Lobby")
+	if lobby_service and not lobby_service.config.use_lobby_screen:
+		return
+	show_screen(lobby)
+
+func set_match_mode(active: bool) -> void:
+	$Screens.visible = not active
+	pause_menu.set_active(active)
+	if not active:
+		show_screen(main_menu)
 
 func show_screen(screen: Control) -> void:
 	for child in $Screens.get_children():
@@ -53,10 +65,6 @@ func _on_connection_failed(reason: String) -> void:
 
 func _on_disconnected(reason: String) -> void:
 	overlay.show_error("Disconnected", reason)
-
-func _on_lobby_joined(_id) -> void:
-	overlay.hide_overlay()
-	show_screen(lobby)
 
 	var lobby_service = get_node_or_null("/root/Lobby")
 	if lobby_service:

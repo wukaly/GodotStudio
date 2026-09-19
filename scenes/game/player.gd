@@ -17,9 +17,8 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	camera.current = is_multiplayer_authority()
 
-
 func _physics_process(delta: float) -> void:
-	if not is_multiplayer_authority():
+	if multiplayer.multiplayer_peer == null or not is_multiplayer_authority():
 		return
 
 	if not is_on_floor():

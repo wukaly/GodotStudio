@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cua553v1ustna"]
+
+[ext_resource type="Script" uid="uid://basiyf0djphvp" path="res://scenes/ui/pause_menu.gd" id="1_6tw0m"]
+
+[node name="PauseMenu" type="Control" unique_id=1543082370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tw0m")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=943537452]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1866691468]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=310215613]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=1059689090]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=1191528067]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1212143545]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RequestsHeader" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1025600868]
+layout_mode = 2
+text = "Join Requests"
+
+[node name="RequestList" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1251139352]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PlayersHeader" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1258228591]
+layout_mode = 2
+text = "Players"
+
+[node name="PlayerList" type="ScrollContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=205819042]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/PlayerList" unique_id=316247411]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=186799707]
+layout_mode = 2
+text = "Resume"
+
+[node name="LeaveButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=397969644]
+layout_mode = 2
+text = "Leave"
