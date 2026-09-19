@@ -1,7 +1,7 @@
 class_name SteamBackend
 extends MatchmakingBackend
 
-const GAME_TAG := "GodotStudio"
+const GAME_TAG := "godotstudio"
 const MAX_LOBBIES := 50
 
 const RESULT_OK := 1
