@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c42cp54upf1gg"]
+
+[ext_resource type="Script" uid="uid://c0xu8rnsryovc" path="res://scenes/ui/ui_root.gd" id="1_w6j4g"]
+[ext_resource type="PackedScene" uid="uid://ceymwgx8wqmj2" path="res://scenes/ui/main_menu.tscn" id="2_f5wd2"]
+[ext_resource type="PackedScene" uid="uid://cs2uwg42ys41t" path="res://scenes/ui/lobby_browser.tscn" id="3_yoora"]
+[ext_resource type="PackedScene" uid="uid://bf1n7tdx4ot5v" path="res://scenes/ui/direct_join.tscn" id="4_t1f3t"]
+[ext_resource type="PackedScene" uid="uid://cp6sv0o2700nk" path="res://scenes/ui/connection_overlay.tscn" id="4_yoora"]
+[ext_resource type="PackedScene" uid="uid://yt8cio83ist6" path="res://scenes/ui/lobby.tscn" id="5_bn0b7"]
+
+[node name="UiRoot" type="CanvasLayer" unique_id=272056482]
+script = ExtResource("1_w6j4g")
+
+[node name="Screens" type="Control" parent="." unique_id=1990736912]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenu" parent="Screens" unique_id=1799552395 instance=ExtResource("2_f5wd2")]
+layout_mode = 1
+
+[node name="LobbyBrowser" parent="Screens" unique_id=1583254235 instance=ExtResource("3_yoora")]
+layout_mode = 1
+
+[node name="DirectJoin" parent="Screens" unique_id=245013957 instance=ExtResource("4_t1f3t")]
+layout_mode = 1
+
+[node name="Lobby" parent="Screens" unique_id=795364109 instance=ExtResource("5_bn0b7")]
+layout_mode = 1
+
+[node name="ConnectionOverlay" parent="." unique_id=705208219 instance=ExtResource("4_yoora")]

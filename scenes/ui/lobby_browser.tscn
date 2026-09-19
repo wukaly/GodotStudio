@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cs2uwg42ys41t"]
+
+[ext_resource type="Script" uid="uid://ce8id1bl4pn4e" path="res://scenes/ui/lobby_browser.gd" id="1_5qts1"]
+
+[node name="LobbyBrowser" type="Control" unique_id=1583254235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5qts1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1266520165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1965953471]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1858998717]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=1684059935]
+layout_mode = 2
+text = "Lobby"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=788873402]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RefreshButton" type="Button" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=1199732023]
+layout_mode = 2
+text = "Refresh"
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=774300003]
+layout_mode = 2
+text = "Back"
+
+[node name="FilterBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1876219081]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SearchField" type="LineEdit" parent="MarginContainer/VBoxContainer/FilterBar" unique_id=908620959]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search"
+
+[node name="ModeFilter" type="OptionButton" parent="MarginContainer/VBoxContainer/FilterBar" unique_id=594295798]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="HideFullCheck" type="CheckBox" parent="MarginContainer/VBoxContainer/FilterBar" unique_id=1904706058]
+layout_mode = 2
+text = "Hide Full"
+
+[node name="Results" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1706922009]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Results" unique_id=680578117]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="LobbyList" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Results/MarginContainer" unique_id=1714185065]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Results/MarginContainer/LobbyList" unique_id=1000645961]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="EmptyLabel" type="Label" parent="MarginContainer/VBoxContainer/Results/MarginContainer" unique_id=1425667737]
+visible = false
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SearchingLabel" type="Label" parent="MarginContainer/VBoxContainer/Results/MarginContainer" unique_id=1182645432]
+visible = false
+layout_mode = 2

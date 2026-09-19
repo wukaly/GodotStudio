@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://3lakw8je50ka"]
+
+[ext_resource type="Script" uid="uid://314rpe5c1r7w" path="res://scenes/ui/lobby_row.gd" id="1_j7eaf"]
+
+[node name="LobbyRow" type="PanelContainer" unique_id=34375102]
+script = ExtResource("1_j7eaf")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=398349863]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=873965337]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="NameLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=104966572]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+text_overrun_behavior = 3
+
+[node name="ModeLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=656998703]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1789576957]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayersLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1315524279]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=838778661]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+
+[node name="JoinButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=603477007]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Join"

@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://yt8cio83ist6"]
+
+[ext_resource type="Script" uid="uid://c7vubsaskgnpe" path="res://scenes/ui/lobby.gd" id="1_6oakf"]
+
+[node name="Lobby" type="Control" unique_id=795364109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6oakf")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1757734986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1716856638]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1260311731]
+layout_mode = 2
+
+[node name="LobbyNameLabel" type="Label" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=951667960]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Space" type="Control" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=212164335]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InviteButton" type="Button" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=929496423]
+layout_mode = 2
+text = "Invite
+"
+
+[node name="LeaveButton" type="Button" parent="MarginContainer/VBoxContainer/HeaderBar" unique_id=1271849432]
+layout_mode = 2
+text = "Leave
+"
+
+[node name="Body" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=747109164]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="PlayersPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer/Body" unique_id=575198201]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Body/PlayersPanel" unique_id=480866687]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/PlayersPanel/MarginContainer" unique_id=1736729094]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayersHeader" type="Label" parent="MarginContainer/VBoxContainer/Body/PlayersPanel/MarginContainer/VBoxContainer" unique_id=1464466762]
+layout_mode = 2
+
+[node name="PlayerList" type="ScrollContainer" parent="MarginContainer/VBoxContainer/Body/PlayersPanel/MarginContainer/VBoxContainer" unique_id=730481234]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/PlayersPanel/MarginContainer/VBoxContainer/PlayerList" unique_id=1442858872]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="SettingsPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer/Body" unique_id=1797443286]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Body/SettingsPanel" unique_id=66390243]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer" unique_id=494972534]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SettingsHeader" type="Label" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer" unique_id=529631708]
+layout_mode = 2
+text = "Settings"
+
+[node name="SettingsGrid" type="GridContainer" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer" unique_id=2118745372]
+layout_mode = 2
+columns = 2
+
+[node name="MapLabel" type="Label" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer/SettingsGrid" unique_id=299087965]
+layout_mode = 2
+text = "Map: "
+
+[node name="MapOption" type="OptionButton" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer/SettingsGrid" unique_id=1289430144]
+layout_mode = 2
+
+[node name="ModeLabel" type="Label" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer/SettingsGrid" unique_id=411472032]
+layout_mode = 2
+text = "Mode: "
+
+[node name="ModeOption" type="OptionButton" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer/SettingsGrid" unique_id=817926536]
+layout_mode = 2
+
+[node name="MaxPlayersLabel" type="Label" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer/SettingsGrid" unique_id=1463296713]
+layout_mode = 2
+text = "Players: "
+
+[node name="MaxPlayersSpin" type="SpinBox" parent="MarginContainer/VBoxContainer/Body/SettingsPanel/MarginContainer/VBoxContainer/SettingsGrid" unique_id=729386490]
+layout_mode = 2
+
+[node name="FooterBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1110008976]
+layout_mode = 2
+
+[node name="LobbyCodeLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterBar" unique_id=405794614]
+layout_mode = 2
+text = "Lobby Code"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/FooterBar" unique_id=1769694701]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReadyButton" type="CheckButton" parent="MarginContainer/VBoxContainer/FooterBar" unique_id=1539062818]
+layout_mode = 2
+text = "Ready"
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/FooterBar" unique_id=508025163]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Start"
