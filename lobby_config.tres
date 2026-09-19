@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="LobbyConfig" format=3 uid="uid://ync6yoqihq5g"]
+
+[ext_resource type="Script" uid="uid://btr4kft6ht5of" path="res://addons/GodotStudio/session/lobby_config.gd" id="1_txkbq"]
+
+[resource]
+script = ExtResource("1_txkbq")
+metadata/_custom_type_script = "uid://btr4kft6ht5of"

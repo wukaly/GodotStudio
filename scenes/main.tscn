@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cod2nedmx7gxj"]
+
+[ext_resource type="Script" uid="uid://cpeuw6d2fbqjf" path="res://scenes/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c42cp54upf1gg" path="res://scenes/ui/ui_root.tscn" id="2_sugp2"]
+
+[node name="Main" type="Node3D" unique_id=1431557515]
+script = ExtResource("1_0wfyh")
+
+[node name="UiRoot" parent="." unique_id=272056482 instance=ExtResource("2_sugp2")]
+
+[node name="World" type="Node3D" parent="." unique_id=301337214]
