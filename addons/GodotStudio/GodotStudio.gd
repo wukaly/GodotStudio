@@ -6,8 +6,8 @@ const AUTOLOAD_PATH := "res://addons/GodotStudio/network/network.gd"
 
 func _enter_tree() -> void:
 	if not ProjectSettings.has_setting("godot_studio/lobby/config"):
-		ProjectSettings.set_setting("godot_studio/lobby/config", "res://lobby_config.tres")
-		ProjectSettings.set_initial_value("godot_studio/lobby/config", "res://lobby_config.tres")
+		ProjectSettings.set_setting("godot_studio/lobby/config", "res://config/lobby_config.tres")
+		ProjectSettings.set_initial_value("godot_studio/lobby/config", "res://config/lobby_config.tres")
 	add_autoload_singleton("Network", "res://addons/GodotStudio/network/network.gd")
 	add_autoload_singleton("Lobby", "res://addons/GodotStudio/session/lobby.gd")
 

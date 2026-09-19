@@ -10,7 +10,7 @@ signal join_requested(peer_id: int, player_name: String)
 signal join_request_resolved(peer_id: int)
 
 const CONFIG_SETTING := "godot_studio/lobby/config"
-const DEFAULT_CONFIG_PATH := "res://lobby_config.tres"
+const DEFAULT_CONFIG_PATH := "res://config/lobby_config.tres"
 
 var local_name := "Player"
 var config: LobbyConfig

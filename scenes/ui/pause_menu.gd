@@ -17,9 +17,6 @@ var _lobby: Node
 var _active := false
 
 func _ready() -> void:
-	print(Steam.steamInitEx())
-	print(Steam.getPersonaName())
-	print(ClassDB.class_exists("SteamMultiplayerPeer"))
 	
 	_lobby = get_node_or_null("/root/Lobby")
 	visible = false
