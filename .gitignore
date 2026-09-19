@@ -2,6 +2,11 @@
 .godot/
 .nomedia
 
+# Godot Steam
+/addons/godotsteam/
+/addons/steam_multiplayer_peer/
+/steam_appid.txt
+
 # Godot-specific ignores
 .import/
 export.cfg
