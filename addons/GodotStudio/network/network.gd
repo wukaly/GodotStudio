@@ -58,8 +58,6 @@ func supports_lobby_list() -> bool:
 	return backend.supports_lobby_list()
 
 func _create_backend() -> MatchmakingBackend:
-	if ClassDB.class_exists("Steam"):
-		var steam_script := "res://addons/GodotStudio/network/steam_backend.gd"
-		if ResourceLoader.exists(steam_script):
-			return load(steam_script).new()
+	if SteamBackend.is_available():
+		return SteamBackend.new()
 	return EnetBackend.new()
